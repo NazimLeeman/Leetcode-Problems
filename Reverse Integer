@@ -1,0 +1,11 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    let reversed = parseInt(Math.abs(x).toString().split("").reverse().join(""), 10);
+
+    if(reversed > 2**31) return 0;
+
+    return reversed * Math.sign(x);
+};
