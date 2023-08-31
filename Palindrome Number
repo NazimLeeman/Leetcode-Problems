@@ -1,0 +1,12 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    let newx = String(x);
+    let reversed = "";
+    for(let i = newx.length - 1; i >=0; i--) {
+        reversed += newx[i];
+    }
+    return newx === reversed;
+};
