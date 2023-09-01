@@ -1,0 +1,16 @@
+/**
+ * @param {number} num
+ * @return {string}
+ */
+var intToRoman = function(num) {
+    let roman  = "";
+    let arr1 = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+    let value = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+    for(let i = 0; num > 0; i++) {
+        while(num >= value[i]) {
+            roman += arr1[i];
+            num -= value[i];
+        }
+    }
+    return roman;
+};
