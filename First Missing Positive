@@ -1,0 +1,19 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var firstMissingPositive = function(nums) {
+    const filtered = nums.filter((a) => a > 0 );
+    let max = 0;
+    const containSet = new Set();
+    for(const values of filtered ) {
+        containSet.add(values);
+        if(values > max) max = values;
+    }
+    let n = 1;
+    while(n <= max) {
+        if(!containSet.has(n)) return n;
+        n++;
+    }
+    return n;
+};
