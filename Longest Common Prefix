@@ -1,0 +1,18 @@
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    strs.sort();
+    let commonPrefix = "";
+    let arrayLength = strs.length;
+    for(let i=0; i < strs[0].length ;i++){
+        if(strs[0].charAt(i) == strs[arrayLength-1].charAt(i)){
+            commonPrefix += strs[0].charAt(i);
+        } else {
+            break;
+        }
+}
+
+return commonPrefix
+};
